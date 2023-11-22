@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,11 +19,45 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
+  font-family: 'Poppins', sans-serif;
+
 }
+
+/* Typography Styles */
+h1,.h1 {
+  font-size: 24px;
+  font-weight: 600; /* SemiBold */
+}
+
+h2, .h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h3, .h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+p, .p {
+  font-size: 14px;
+  font-weight: 400; /* Regular */
+}
+
+button, .button {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* color */
+.bg-gray1 {
+  background-color: #000000;
+}
+.bg-gray2 {
+  background-color: #3C3B3B;
+}
+.bg-gray3 {
+  background-color: #D9D9D9;
+}
+
