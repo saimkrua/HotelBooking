@@ -1,7 +1,7 @@
 import BookingForm from "@/components/BookingForm";
 import getBooking from "@/libs/getBooking";
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from '@/utils/authOption'
 import { redirect } from "next/navigation";
 import BookingCard from "@/components/BookingCard";
 import EditBooking from "@/components/EditBooking";

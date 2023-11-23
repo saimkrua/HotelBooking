@@ -1,6 +1,6 @@
 import { Hotel } from "@/interface";
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from '@/utils/authOption'
 import getUserProfile from "@/libs/getUserProfile";
 import { Button, Stack, ThemeProvider } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete'

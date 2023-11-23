@@ -6,8 +6,9 @@ import { BookingItem } from '@/interface';
 import { redirect } from 'next/navigation';
 import getUserProfile from '@/libs/getUserProfile';
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from '@/utils/authOption'
 import EditBookingForm from './EditBookingForm';
+import { theme } from './MuiThemeProvider';
 
 export default async function EditBooking({ book }: { book: BookingItem }) {
 

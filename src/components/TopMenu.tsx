@@ -1,6 +1,6 @@
 import TopMenuItem from "./TopMenuItem";
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from '@/utils/authOption'
 import getUserProfile from "@/libs/getUserProfile";
 import { redirect } from "next/navigation";
 

@@ -1,6 +1,6 @@
 import getBookings from '@/libs/getBookings';
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from '@/utils/authOption'
 import { redirect } from 'next/navigation';
 import BookingCatalog from '@/components/BookingCatalog';
 import { revalidateTag } from 'next/cache';

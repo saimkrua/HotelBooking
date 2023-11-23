@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { getServerSession } from 'next-auth/next'
-import { authOptions } from './api/auth/[...nextauth]/route'
+import { authOptions } from '@/utils/authOption'
 import NextAuthProvider from '@/providers/NextAuthProvider'
 import ReduxProvider from '@/redux/ReduxProvider'
 import TopMenu from '@/components/TopMenu'
