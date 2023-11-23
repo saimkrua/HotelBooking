@@ -11,11 +11,11 @@ export default async function BookingCatalog({ books }: { books: BookingItem[] }
             {
 
                 bookList.map((book: BookingItem) => (
-                    <Link href={`/booking/${book._id}`}>
+                    // <Link href={`/booking/${book._id}`}>
                         <BookingCard
                             Book={book}
                         />
-                    </Link>
+                    // </Link>
                 ))
             }
         </div>

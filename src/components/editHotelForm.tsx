@@ -1,7 +1,7 @@
 "use client"
 import { Hotel } from "@/interface"
 import createHotel from "@/libs/createHotel"
-import { TextField, Container, Button, Link, Typography, Stack } from "@mui/material"
+import { TextField, Container, Button, Link, Typography, Stack, ThemeProvider } from "@mui/material"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import { redirect, useRouter } from "next/navigation"
@@ -11,6 +11,7 @@ import editHotel from "@/libs/editHotel"
 import EditIcon from '@mui/icons-material/Edit'
 import DeleteIcon from '@mui/icons-material/Delete'
 import deleteHotel from "@/libs/deleteHotel"
+import { theme } from "./MuiThemeProvider"
 
 export default function EditHotelForm({ hotel }: { hotel: Hotel }) {
 
@@ -87,6 +88,8 @@ export default function EditHotelForm({ hotel }: { hotel: Hotel }) {
 
 
     return (
+        <ThemeProvider theme={theme}>
+
         <Container component="main" maxWidth="xs">
             <Box
                 sx={{
@@ -199,5 +202,6 @@ export default function EditHotelForm({ hotel }: { hotel: Hotel }) {
                 </Box>
             </Box>
         </Container>
+        </ThemeProvider>
     )
 }

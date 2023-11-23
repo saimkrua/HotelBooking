@@ -5,7 +5,8 @@ import { authOptions } from './api/auth/[...nextauth]/route'
 import NextAuthProvider from '@/providers/NextAuthProvider'
 import ReduxProvider from '@/redux/ReduxProvider'
 import TopMenu from '@/components/TopMenu'
-import { AlertProvider } from '@/components/AlertContext'
+import { ThemeProvider } from '@emotion/react'
+import { theme } from '@/components/MuiThemeProvider'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,17 +20,18 @@ export default async function RootLayout({
 }) {
 
   const nextAuthSession = await getServerSession(authOptions)
-
   return (
     <html lang="en">
       <body>
         <ReduxProvider>
           <NextAuthProvider session={nextAuthSession}>
-          <AlertProvider>
-            <main >
-              {children}
-            </main>
-            </AlertProvider>
+            {/* <ThemeProvider theme={theme}> */}
+              {/* <AlertProvider> */}
+                <main >
+                  {children}
+                </main>
+              {/* </AlertProvider> */}
+            {/* </ThemeProvider> */}
           </NextAuthProvider>
         </ReduxProvider>
       </body>

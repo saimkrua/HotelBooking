@@ -1,26 +1,25 @@
-// AlertPopup.tsx
-import React from 'react';
-import { Alert } from '@mui/material';
-import useAlert from '../hooks/useAlert';
+// // AlertPopup.tsx
+// import React from 'react';
+// import { Alert } from '@mui/material';
 
-const AlertPopup: React.FC = () => {
-    const { text, type } = useAlert();
+// const AlertPopup: React.FC = () => {
+//     const { text, type } = useAlert();
 
-    if (text && type) {
-        return (
-            <Alert
-                severity={type}
-                sx={{
-                    position: 'absolute',
-                    zIndex: 10,
-                }}
-            >
-                {text}
-            </Alert>
-        );
-    } else {
-        return <></>;
-    }
-};
+//     if (text && type) {
+//         return (
+//             <Alert
+//                 severity={type}
+//                 sx={{
+//                     position: 'absolute',
+//                     zIndex: 10,
+//                 }}
+//             >
+//                 {text}
+//             </Alert>
+//         );
+//     } else {
+//         return <></>;
+//     }
+// };
 
-export default AlertPopup;
+// export default AlertPopup;

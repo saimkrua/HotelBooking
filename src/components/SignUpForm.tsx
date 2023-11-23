@@ -13,6 +13,8 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { ThemeProvider } from '@emotion/react';
+import { theme } from './MuiThemeProvider';
 
 export default function SignUpForm() {
     const [name, setName] = useState('');
@@ -51,6 +53,7 @@ export default function SignUpForm() {
     };
 
     return (
+        <ThemeProvider theme={theme}>
 
         <Container component="main" maxWidth="xs">
             <CssBaseline />
@@ -62,9 +65,9 @@ export default function SignUpForm() {
                     alignItems: 'center',
                 }}
             >
-                <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                     <LockOutlinedIcon />
-                </Avatar>
+                </Avatar> */}
                 <Typography component="h1" variant="h5">
                     Sign up
                 </Typography>
@@ -139,6 +142,7 @@ export default function SignUpForm() {
                 </Box>
             </Box>
         </Container>
+        </ThemeProvider>
     );
 }
 

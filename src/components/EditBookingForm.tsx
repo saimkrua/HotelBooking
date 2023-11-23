@@ -103,7 +103,7 @@ export default function BookingForm({ book }: { book: BookingItem }) {
                         </LocalizationProvider>
                     </FormControl>
                 </div>
-                <Stack direction="row" spacing={2} padding={2}>
+                <Stack justifyContent="center" alignItems="center" direction="row" spacing={2} padding={2}>
                     <Button onClick={handleDelete} size="medium" variant="contained" color="error" startIcon={<DeleteIcon />}>
                         Delete
                     </Button>

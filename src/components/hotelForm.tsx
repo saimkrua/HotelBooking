@@ -1,13 +1,13 @@
 "use client"
 import { Hotel } from "@/interface"
 import createHotel from "@/libs/createHotel"
-import { TextField, Container, Button, Link, Typography } from "@mui/material"
+import { TextField, Container, Button, Link, Typography, ThemeProvider } from "@mui/material"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import { redirect, useRouter } from "next/navigation"
 import { FormEvent, useState } from "react"
 import { useSession } from 'next-auth/react';
-import { revalidateTag } from "next/cache"
+import { theme } from "./MuiThemeProvider"
 
 export default function HotelForm() {
 
@@ -55,6 +55,8 @@ export default function HotelForm() {
 
 
     return (
+        <ThemeProvider theme={theme}>
+
         <Container component="main" maxWidth="xs">
             <Box
                 sx={{
@@ -166,5 +168,6 @@ export default function HotelForm() {
                 </Box>
             </Box>
         </Container>
+        </ThemeProvider>
     )
 }
