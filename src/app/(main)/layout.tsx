@@ -11,7 +11,7 @@ export default async function MainLayout({
   return (
     <div>
       <TopMenu />
-      <div className='mt-28 px-60 bg-white'>
+      <div className='mt-28 mx-auto bg-white lg:w-[700px] xl:w-[800px] 2xl:w-[1000px]'>
         {children}
       </div>
     </div>

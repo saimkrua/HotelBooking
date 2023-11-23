@@ -8,7 +8,7 @@ export default async function HotelCatalog({ hotels }: { hotels: Hotel[] }) {
     const hotelList = await hotels
 
     return (
-        <div className="bg-inherit max-w-screen-xl felx row-auto">
+        <div className="bg-inherit w- felx row-auto">
             {
                 hotelList.map((hotel: Hotel) => (
                     // <Link href={`/booking/reserve/${hotel.id}`}>
